@@ -3,7 +3,7 @@ services:
   -docker
 
 before_install:
-  - docker build -t Ziamount/docker-react -f Dockerfile.dev .
+  - docker build -t ziamount/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true Ziamount/docker-react npm run test -- --coverage
+  - docker run -e CI=true ziamount/docker-react npm run test -- --coverage
